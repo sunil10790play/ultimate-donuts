@@ -5,7 +5,12 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div class="app">
       <h1>{{ message }}</h1>
-      <input [value]="message" (input)="handleInputChange($event)" />
+      <input
+        [value]="message"
+        (input)="handleInputChange($event)"
+        #messageInput
+      />
+      <p>{{ messageInput.value }}</p>
     </div>
   `,
   styles: [
