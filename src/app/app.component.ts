@@ -4,13 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-root',
   template: `
     <div class="app">
-      <h1>{{ message }}</h1>
-      <input
-        [value]="message"
-        (input)="handleInputChange($event)"
-        #messageInput
-      />
-      <p>{{ messageInput.value }}</p>
+      <app-donut-list></app-donut-list>
     </div>
   `,
   styles: [
@@ -25,14 +19,5 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class AppComponent implements OnInit {
-  message!: string;
-
-  ngOnInit() {
-    this.message = 'Hello World again!';
-  }
-
-  handleInputChange(event: Event) {
-    const { value } = event.target as HTMLInputElement;
-    this.message = value;
-  }
+  ngOnInit() {}
 }
